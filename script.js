@@ -6,17 +6,16 @@ function makeOrder() {
     document.querySelector(".fullstar3").classList.toggle("star");
     document.querySelector(".fa-star-half-o").classList.toggle("star");
     document.querySelector(".fa-star-o").classList.toggle("star");
-    // document.querySelector(`.dto-btn-span`).innerHTML =`CANCEL`;
-    // document.querySelector(`.dto-btn-span`).style.color =`black`, `grey`;
 
     const span = document.querySelector(".dto-btn-span").innerText;
-    if(span == `ORDER`){
+    if (span == `ORDER`){
       document.querySelector(".dto-btn-span").innerText = `CANCEL`;
+      document.querySelector(".dto-btn-span").classList.add("black");
     } else {
       document.querySelector(".dto-btn-span").innerText = `ORDER`;
+      document.querySelector(".dto-btn-span").classList.remove("black");
     }
      ;
-
 }
 
 

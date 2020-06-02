@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6{
+    
     color:#D9D9D9;
 }
 h1{
@@ -25,13 +26,16 @@ body{
     
     
 }
-.fa.fa-clock-o {
+.fa.fa-clock-o, .fa.fa-location-arrow, .fa.fa-phone {
     color: grey;
     font-size: 30px;
     margin-bottom: 20px;
 }
 p{
-    font-family: "Helvetica Neue"
+    font-family: 'Inter', ;
+    font: normal;
+    font-weight: normal;
+    color: #fff;
 }
 .navbar a {
     color:white;
@@ -41,8 +45,11 @@ p{
     margin-left: 10px;
    
 }
+/* TITLE */
 
-.title {
+
+
+.title{
     background-image: url('./img/main.jpg');
     min-height: 133vh;
     position: relative;
@@ -85,24 +92,30 @@ p{
 .title-content button {
     background-color: #34C759;
     border-radius: 50px;
-    font-size: 16px;
-    width: 200px;
-    height: 65px;
-    padding: 15px;
+    font-family: 'Inter',;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    width: 220px;
+    height: 75px;
     letter-spacing: 4px;
-    margin-top: 40px;
-    outline: none !important;
+    margin: 25px 0 40px 0;
+
 }
+
 
 .title-info-content{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 400px;
 }
 
 .title-info{
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -110,12 +123,46 @@ p{
     margin-top: 50px;
 }
 
+.title-content h1{
+    font-size: 72px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 87px;
+    color: #fff;
+}
+.title-content p{
+        text-align: center;
+        width: 595px;
+        height: 52px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        position: relative;
+        opacity: 0.7;
+} 
+.title-content span{
+            font-weight: 300;
+ }        
+
+ .title-info-content p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+ }
+ .title-info-content h6{
+    font-family: 'Inter',;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+ }
+/* work section */
+
 .work-title{
     text-align: center;
 }
-
-
-/* work section */
 
 .work{
     padding: 40px;
@@ -183,7 +230,14 @@ hr{
 .wrapper{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
+
+ @media only screen and (max-width:2220px){
+    .work-blank{
+        margin: 15px 15px;
+    }
+   
 
 /*
  ********
@@ -194,6 +248,12 @@ hr{
 .dishes{
     padding: 40px;
 }
+
+@media only screen and (max-width: 635px) {
+    .dishes h3 {
+      text-align: center;
+    }
+  }
 
 .dishes-blank-img{
     min-height: 260px;
@@ -280,12 +340,20 @@ hr{
     flex-wrap: wrap;
     margin: 0 340px;
 }
+@media only screen and (max-width: 1375px) {
+    .dishes-wrapper {
+      margin: 0 135px;
+    }
+  }
 
 .dishes-title-order{
     display: flex;
     align-items: center;
 }
 
+.black{
+    color: black !important;
+}
 
 /* 
     *******
@@ -403,6 +471,5 @@ hr{
 
 .star{
     color: #F9AD3D !important;
-    
 }
 
