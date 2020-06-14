@@ -8,11 +8,9 @@
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/5a658a405d.js" crossorigin="anonymous"></script>
   
 </head>
-<body>
-
-</body>
 <body>
   <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -41,16 +39,18 @@
           </div>
       </div>
   </nav>
- 
-  <div class="line"></div>
 
-  <section class="title">
-    <div class="overlay"></div>
+
+
+
+<div class="line"></div>
+
+<section class="title">
     <div class="title-content">
        <h1> <span style="margin-right: 30px;">Your</span>Favourite Food</h1>
         <h1> <span style="margin-right: 40px;">Delivered</span>Hot & Fresh</h1>
           <p>HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes..</p>
-           <a><button class="btn"> Order Now </button></a> 
+           <a href="#dishes"><button class="btn"> Order Now </button></a> 
       <div class="title-info">
         <div class="title-info-content">
           <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -68,9 +68,47 @@
           <p>Call Online</p>
         </div>
       </div>
-   </div>         
-  </section>
+      </div>    
+</section>
 
+<section class="about">
+  <div class="small-title">
+    <h2><b>AB0UT</b> </h2>
+    <hr style="opacity: 0;">
+      <h3>The Basics Of Healthy Food</h3>
+</div> 
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner"> 
+        <div class="carousel-item active"> 
+          <div class="row"> 
+            <div class="col-4 offset-2"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+            <div class="col-4"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+          </div> 
+        </div> 
+        <div class="carousel-item"> 
+          <div class="row"> 
+            <div class="col-4 offset-2"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+            <div class="col-4"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="carousel-item"> 
+        <div class="row"> 
+          <div class="col-4 offset-2"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+          <div class="col-4"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+        </div> 
+      </div> 
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
 
   <section class="work"> 
       <div class="small-title">
@@ -124,10 +162,10 @@
         <i class="fa fa-star fullstar1" aria-hidden="true"></i>
         <i class="fa fa-star fullstar2" aria-hidden="true"></i>
         <i class="fa fa-star fullstar3" aria-hidden="true"></i>
-        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+        <i class="fas fa-star-half-alt"></i>
         <i class="fa fa-star-o" aria-hidden="true"></i>
           <span style="color: aliceblue; margin-left: 15px; font-weight: bold;">12</span>
-            <button class="btn" id="btn" onclick="makeOrder()"> <span class="dto-btn-span">ORDER</span> </button>
+            <button class="btn" id="btn" onclick="makeOrder(this)"> <span class="dto-btn-span">ORDER</span> </button>
           </div>
       </div>
    </div>
@@ -142,10 +180,10 @@
      <i class="fa fa-star" aria-hidden="true"></i>
      <i class="fa fa-star" aria-hidden="true"></i>
      <i class="fa fa-star" aria-hidden="true"></i>
-     <i class="fa fa-star-half-o" aria-hidden="true"></i>
+     <i class="fas fa-star-half-alt"></i>
      <i class="fa fa-star-o" aria-hidden="true"></i>
        <span style="color: aliceblue; margin-left: 15px; font-weight: bold;">12</span>
-         <button class="btn"><span>ORDER</span></button>
+         <button class=" btn" onclick="makeOrder(this)"><span class="dto-btn-order">ORDER</span></button>
        </div>
    </div>
 </div>
@@ -160,10 +198,10 @@
    <i class="fa fa-star" aria-hidden="true"></i>
    <i class="fa fa-star" aria-hidden="true"></i>
    <i class="fa fa-star" aria-hidden="true"></i>
-   <i class="fa fa-star-half-o" aria-hidden="true"></i>
+   <i class="fas fa-star-half-alt"></i>
    <i class="fa fa-star-o" aria-hidden="true"></i>
      <span style="color: aliceblue; margin-left: 15px; font-weight: bold;">12</span>
-       <button class="btn" id="btn2" onclick="makeOrder()"><span class="dto-btn-span2">ORDER</span></button>
+       <button class="btn" onclick="makeOrder(this)"><span class="dto-btn-span">ORDER</span></button>
      </div>
  </div>
 </div>
@@ -178,10 +216,10 @@
    <i class="fa fa-star" aria-hidden="true"></i>
    <i class="fa fa-star" aria-hidden="true"></i>
    <i class="fa fa-star" aria-hidden="true"></i>
-   <i class="fa fa-star-half-o" aria-hidden="true"></i>
+   <i class="fas fa-star-half-alt"></i>
    <i class="fa fa-star-o" aria-hidden="true"></i>
      <span style="color: aliceblue; margin-left: 15px; font-weight: bold;">12</span>
-       <button class="btn" id="btn4" onclick="makeOrder()"><span class="dto-btn-span3">ORDER</span></button>
+       <button class="btn"  onclick="makeOrder(this)"><span class="dto-btn-span">ORDER</span></button>
      </div>
  </div>
 </div>
@@ -196,10 +234,10 @@
     <i class="fa fa-star" aria-hidden="true"></i>
     <i class="fa fa-star" aria-hidden="true"></i>
     <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+    <i class="fas fa-star-half-alt"></i>
     <i class="fa fa-star-o" aria-hidden="true"></i>
      <span style="color: aliceblue; margin-left: 15px; font-weight: bold;">12</span>
-       <button class="btn" id="btn5" onclick="makeOrder()"><span class="dto-btn-span4">ORDER</span></button>
+       <button class="btn" onclick="makeOrder(this)"><span class="dto-btn-span">ORDER</span></button>
      </div>
  </div>
 </div>
@@ -214,10 +252,10 @@
     <i class="fa fa-star" aria-hidden="true"></i>
     <i class="fa fa-star" aria-hidden="true"></i>
     <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+    <i class="fas fa-star-half-alt"></i>
     <i class="fa fa-star-o" aria-hidden="true"></i>
      <span style="color: aliceblue; margin-left: 15px; font-weight: bold;">12</span>
-       <button class="btn"  id="btn" onclick="makeOrder()"><span class="dto-btn-span5">ORDER</span></button>
+       <button class="btn"   onclick="makeOrder(this)"><span class="dto-btn-span">ORDER</span></button>
      </div>
  </div>
 </div>
@@ -277,8 +315,125 @@
 </section>
 
 
+<section class="recipes">
+              <div class="small-title">
+                <h2><b>RECIPES</b></h2>
+                <hr>
+                  <h3>Recipes From Our Chefs</h3>
+              </div> 
+               <div class="container">
+            <div class="recipes-wrapper">
+              <div class="big-recipes-blank">
+                  <p>BREAKFAST</p>
+                    <span>05 Jul 2016</span>
+                      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                      <span>Jason Keller</span>
+                  <div class="blank-lower">
+                        <i class="fas fa-eye"></i>
+                      <span>275</span>
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      <span>12</span>
+                </div>
+              </div>
+              <div class="small-wrapper">
+                <div class="small-recipes-blank srb-1">
+                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</h4>
+                    <p>LUNCH</p>
+                      <span>07 Jan 2016</span>
+                    <div class="blank-lower">
+                        <i class="fas fa-eye"></i>
+                      <span>275</span>
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      <span>12</span>
+                    </div>
+                </div>
+                <div class="small-recipes-blank srb-2">
+                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</h4>
+                    <p>LUNCH</p>
+                      <span>07 Jan 2016</span>
+                    <div class="blank-lower">
+                        <i class="fas fa-eye"></i>
+                      <span>275</span>
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      <span>12</span>
+                    </div>
+                </div>
+                <div class="small-recipes-blank srb-3">
+                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</h4>
+                    <p>LUNCH</p>
+                      <span>07 Jan 2016</span>
+                    <div class="blank-lower">
+                        <i class="fas fa-eye"></i>
+                      <span>275</span>
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                      <span>12</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
 
+<section class="social">
+  <div class="container">
+    <div class="social-wrapper">
+      <div class="social-blank">
+          <div class="social-blnk-upper">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <span>Twitter</span>
+            <a href="#">
+              <button class="btn">F0LL0W US</button>
+            </a>
+          </div>
+    <div class="middle"></div>
+          <div class="social-blnk-lower">
+            <span>24 Jun at 16:20 pm</span>
+            <p>Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit, sed do eiusmod
+              tempor incididunt ut Lorem ipsum dolor
+              sit amet, consectetur adipiscing
+            </p>
+            <span style="color:#34C759">@DennisFerguson</span>
+          </div>
+      </div>
+      <div class="social-blank">
+        <div class="social-blnk-upper">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+          <a href="#">
+            <button class="btn">F0LL0W US</button>
+          </a>
+        </div>
+        <div class="social-blnk-lower inst-lower">
+          <img src="./img/inst-1.png" alt="" class="bigger">
+          <img src="./img/inst-2.png" alt="">
+          <img src="./img/inst-3.png" alt="">
+          <img src="./img/inst-4.png" alt="" class="bigger">
+          <img src="./img/inst-5.png" alt="">
+          <img src="./img/inst-6.png" alt="">
+        </div>
+    </div>
+    <div class="social-blank facebook-blnk">
+      <div class="social-blnk-upper">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <span>Facebook</span>
+        <a href="#">
+          <button class="btn">F0LL0W US</button>
+        </a>
+      </div>
+<div class="middle"></div>
+      <div class="social-blnk-lower">
+        <span>24 Jun at 16:20 pm</span>
+        <p>Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod
+          tempor incididunt ut Lorem ipsum dolor
+          sit amet, consectetur adipiscing
+        </p>
+      </div>
+  </div>
 
+  </div>
+</section>
 
 
 
