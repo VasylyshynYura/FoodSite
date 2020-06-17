@@ -14,8 +14,22 @@
 <body>
   <nav class="navbar navbar-expand-lg">
       <div class="container">
-
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">
+            <div class="logo-content">
+              <div class="logo">
+                <div class="logo-upper">
+                  <img src="./img/logo/vector-1.png" alt="">
+                  <img src="./img/logo/vector-2.png" alt="">
+                </div>
+                <div class="logo-lower">
+                  <img src="./img/logo/vector.png" alt="">
+                </div>
+              </div>
+                <div class="logo-title">
+                  <img src="./img/logo/title.png" alt="">
+                </div>
+              </div>
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -83,20 +97,20 @@
         <div class="carousel-item active"> 
           <div class="row"> 
             <div class="col-4 offset-2"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
-            <div class="col-4"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+            <div class="col-4"> <img class=" w-100" src="./img/carousel-2.jpg" alt="First slide"></div> 
           </div> 
         </div> 
         <div class="carousel-item"> 
           <div class="row"> 
             <div class="col-4 offset-2"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
-            <div class="col-4"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+            <div class="col-4"> <img class=" w-100" src="./img/carousel-2.jpg" alt="First slide"></div> 
           </div> 
         </div> 
       </div> 
       <div class="carousel-item"> 
         <div class="row"> 
           <div class="col-4 offset-2"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
-          <div class="col-4"> <img class=" w-100" src="./img/carousel-1.jpg" alt="First slide"></div> 
+          <div class="col-4"> <img class=" w-100" src="./img/carousel-2.jpg" alt="First slide"></div> 
         </div> 
       </div> 
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -117,25 +131,25 @@
               <h3>How It Works</h3>
       </div>
           <div class="wrapper">
-            <div class="work-blank">
-                <h4>Lorem, ipsum.</h4>
-                  <div class="work-lines"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
+            <div class="work-blank" onmouseenter="hover(this)" onmouseleave="noHover(this)">
+                <h4 class="hovernone">Lorem, ipsum.</h4>
+                  <div class="work-lines hovernone"></div>
+                    <p class="hovernone">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
             </div>
             <div class="work-blank">
-              <h4>Lorem, ipsum.</h4>
-                <div class="work-lines"></div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
+              <h4 class="hovernone">Lorem, ipsum.</h4>
+                <div class="work-lines hovernone"></div>
+                  <p class="hovernone">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
           </div>
-          <div class="work-blank ">
-            <h4>Lorem, ipsum.</h4>
-              <div class="work-lines"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
+          <div class="work-blank">
+            <h4 class="hovernone">Lorem, ipsum.</h4>
+              <div class="work-lines hovernone"></div>
+                <p class="hovernone">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
         </div>
-        <div class="work-blank">
-          <h4>Lorem, ipsum.</h4>
-            <div class="work-lines"></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
+        <div class="work-blank" >
+          <h4 class="hovernone">Lorem, ipsum.</h4>
+            <div class="work-lines hovernone"></div>
+              <p class="hovernone">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magnam.</p>
       </div>
           </div>
   
@@ -375,6 +389,11 @@
 </section>
 
 <section class="social">
+  <div class="small-title">
+    <h2><b>S0CIAL</b></h2>
+    <hr>
+      <h3>We in Social</h3>
+  </div> 
   <div class="container">
     <div class="social-wrapper">
       <div class="social-blank">
@@ -408,9 +427,9 @@
           <img src="./img/inst-1.png" alt="" class="bigger">
           <img src="./img/inst-2.png" alt="">
           <img src="./img/inst-3.png" alt="">
-          <img src="./img/inst-4.png" alt="" class="bigger">
+          <img src="./img/inst-4.png" alt="" class="bigger" style="border-radius: 0 0 0 6px;">
           <img src="./img/inst-5.png" alt="">
-          <img src="./img/inst-6.png" alt="">
+          <img src="./img/inst-6.png" alt="" style="border-radius: 0 0 6px  0;">
         </div>
     </div>
     <div class="social-blank facebook-blnk">
@@ -430,14 +449,50 @@
           sit amet, consectetur adipiscing
         </p>
       </div>
-  </div>
-
+    </div>
   </div>
 </section>
 
+<section class="footer">
+  <div class="title-info">
+    <div class="title-info-content">
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+      <h6>Today 10:00 am - 7:00 pm</h6>
+      <p>Working hours</p>
+    </div>
+    <div class="title-info-content">
+        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+      <h6>Velyka Vasylkivska 100</h6>
+      <p>Get Directions</p>
+    </div>
+    <div class="title-info-content">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+      <h6>+38 (063)833 24 15</h6>
+      <p>Call Online</p>
+    </div>
+  </div>
+  <div class="footer-line"></div>
 
-
-
+<div class="footer-logo">
+  <div class="logo-content">
+    <div class="logo">
+      <div class="logo-upper">
+        <img src="./img/logo/vector-1.png" alt="">
+        <img src="./img/logo/vector-2.png" alt="">
+      </div>
+      <div class="logo-lower">
+        <img src="./img/logo/vector.png" alt="">
+      </div>
+    </div>
+      <div class="logo-title">
+        <img src="./img/logo/title.png" alt="">
+      </div>
+    </div>
+    <div class="copyrigth">
+      <p>© Designed by Yellow Snow. All Rights Reserved. </p>
+    </div>
+  </div>
+</section>
 
 
 
