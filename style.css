@@ -6,7 +6,9 @@
 html{
     scroll-behavior: smooth;
 }
-
+button{
+    box-shadow: none;
+}
 body{
     background-color: #1A1A1A;
 }
@@ -22,30 +24,38 @@ a {
     line-height: 45px;
 }
 
-.navbar {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    z-index: 300;
-    
-    
-}
-.fa.fa-clock-o, .fa.fa-location-arrow, .fa.fa-phone {
-    color: grey;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
 p{
     font-family: 'Inter',;
     font-style: normal;
     font-weight: normal;
     color: #fff;
 }
+.fa.fa-clock-o, .fa.fa-location-arrow, .fa.fa-phone {
+    color: grey;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 300;  
+}
+@media only screen and (max-width: 1023px){
+    .navbar{
+        padding: 20px;
+    }
+}
+.navbar-toggler-icon i{
+    color:#34C759 ;
+    font-size: 30px;
+}
+
 .navbar a {
     color:white;
 }
-
 .navbar .nav-item {
     margin-left: 10px;
    
@@ -185,7 +195,7 @@ p{
 
 
 .work{
-    padding: 40px;
+    padding:40px;
 }
 .small-title h2{
     font-size: 150px;
@@ -198,18 +208,20 @@ p{
 }
 
 .small-title h3{
-    position: relative;
+    position: absolute;
     color: #fff;
-    top: -177px;
+    top: 44px;
     font-size: 63px;
     font-weight: 100;
     letter-spacing: 7px;
 }
 
 .small-title{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 
@@ -228,14 +240,22 @@ hr{
     border-radius: 6px;
 }
 
+.work-blank:hover > .hover{
+    color: black;
+}
+
+.work-blank:hover > .work-lines{
+    background-color: black;
+}
+.work-blank:hover{
+ background-color: #34C759;
+}
 @media only screen and (max-width:1024px){
   .work-blank{
       width: 300px;
   }
 }
-.hover{
-    color: black !important;
-}
+
 .hover-blank{
     background-color:#34C759 ;
 }
@@ -247,7 +267,10 @@ hr{
 .work-blank p{
     color: grey;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: -0.1625px;
+    font-style: normal;
+    font-weight: normal;    
     
 }
 
@@ -508,7 +531,16 @@ hr{
     display: flex;
     justify-content: center;
 }
+@media only screen and (max-width:1040px){
+    .chefs-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .chefs-blank{
+        margin: 0 0 30px 0;
+    }
 
+}
 
 
 .star{
@@ -523,7 +555,6 @@ hr{
     position: relative;
     background-color: #252525;
     width: 100%;
-    min-height: 730px;
     background-color: #1A1A1A;
 }
 
@@ -592,6 +623,20 @@ hr{
     flex-direction: column;
     align-content:space-between;
 }
+
+@media only screen and (max-width: 1023px) {
+    .recipes-wrapper{
+        flex-direction: column;
+    } 
+    .small-recipes-blank{
+        width:100% !important;
+    }
+    .big-recipes-blank{
+        margin: 0 0 30px 0;
+        min-height: 300px;
+    }
+}
+
 .srb-1{
     background-image: url('./img/recipes-2.png');
 }
@@ -606,6 +651,7 @@ hr{
 }
 
 .small-recipes-blank{
+    color: #fff;
     background-position: center;
     background-size: cover;
     border-radius: 6px;
@@ -613,6 +659,29 @@ hr{
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+}
+.recipes-stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.left-side{
+    display: flex;
+}
+
+.left-side span{
+    margin-left: 7px;
+}
+
+.right-side{
+    display: flex;
+    align-items: center;  
+}
+
+.right-side *{
+    margin-right: 10px;
 }
 
 /* 
@@ -624,7 +693,7 @@ hr{
  */
 
 .social{
-    padding: 40px;
+    padding: 40px 40px 120px 40px;
 
 }
 .middle{
@@ -697,15 +766,39 @@ margin: 10px 0;
 .social-blnk-lower{
     padding: 30px;
 }
-
+.inst-lower .bigger{
+    width: 120px;
+}
 .inst-lower img{
     width: 115px;
     height: 120px;
 }
+.img-social{
+    display: flex;
+}
+@media only screen and (max-width:1150px){
+    .social-wrapper{
+        flex-wrap: wrap;
+    }
+    .social-blank{
+        margin: 0 0 30px 0;
+    }
+    .inst-blnk{
+        margin-right: 20px;
+    }
+    .twitter-blnk{
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width:990px){
+
+.social-blank{
+    margin: 0 0 30px 0 ;
+}
 
 
-.inst-lower .bigger{
-    width: 120px;
+
 }
 
 .inst-lower{
@@ -720,10 +813,11 @@ margin-top: 26px;
 }
 
 /* *******
-********
-********  FOOTER
-********
-********* */
+   ********
+   ********  FOOTER
+   ********
+   ********* 
+*/
 
 
 .footer{
@@ -734,7 +828,8 @@ margin-top: 26px;
 .footer-line{
     background-color:#303030;
     width: 100%;
-    height: 2px; 
+    height: 2px;
+    margin-top: 20px; 
 }
 
 .footer-logo{
