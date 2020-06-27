@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    box-shadow: none !important;
 }
 html{
     scroll-behavior: smooth;
@@ -11,6 +12,7 @@ button{
 }
 body{
     background-color: #1A1A1A;
+
 }
 h1, h2, h3, h4, h5, h6{
     
@@ -19,11 +21,17 @@ h1, h2, h3, h4, h5, h6{
 h1{
     font-size: 70px;
 }
+.lock-body{
+overflow: hidden;
+}
+.lock-section{
+    opacity: 0.1;
+    
+}
 
 a {
     line-height: 45px;
 }
-
 p{
     font-family: 'Inter',;
     font-style: normal;
@@ -35,30 +43,62 @@ p{
     font-size: 30px;
     margin-bottom: 20px;
 }
-
+@media only screen and (max-width: 990px){
+    .navbar-nav{
+    text-align: left;
+    }      
+    .nav-link{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 200;
+    }
+    .navbar-collapse{
+        margin-top: 7px;
+    }
+    .second-ul{
+        margin-left: 0px !important;
+    }
+}
 .navbar {
-    position: absolute;
+    position: fixed;
     left: 0px;
     right: 0px;
     top: 0px;
     z-index: 300;  
+    transition: all 0.5s ease 0s;
 }
-@media only screen and (max-width: 1023px){
-    .navbar{
-        padding: 20px;
-    }
+.active-nav{
+    background-color:rgba(48, 48, 48, 0.9);
+                      
 }
 .navbar-toggler-icon i{
     color:#34C759 ;
     font-size: 30px;
+}
+.nav-link button:hover{
+    color: #fff;
 }
 
 .navbar a {
     color:white;
 }
 .navbar .nav-item {
-    margin-left: 10px;
-   
+    margin-left: 10px;   
+}
+.second-ul{
+    margin-left: 40px;
+}
+
+.second-ul li{
+    padding-top: 5px ;
+}
+
+
+
+.nav-link button{
+    border:1px solid #34C759;
+    color: white;
+    padding: 4px 8px 5px 8px;
 }
 /* *****
 ********
@@ -86,8 +126,59 @@ p{
     align-items: center;
 }
 
+/* **********
+*************
+************* FORM FORM FORM
+*************
+*************
+*/
+.regist{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    color: #fff;
+    z-index: 300;
+}
+input{
+    height: 47px;
+    padding: 20px 20px;
+}
+label{
+	display: block;
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.gender label{
+    padding: 0;
+    padding-bottom: 2px;
+}
 
+.gender input{
+    margin: 0 10px;
+}
 
+.register{
+    height: 40px;
+    padding: 0;
+}
+.gender{
+	display: flex;
+    align-items: center;
+	padding: 0;
+	margin-top: 10px;
+}
+
+.form_signIn{
+	display: none;
+}
+.show-form{
+	display: block !important;
+}
 
 
 /* TITLE */
@@ -558,11 +649,24 @@ hr{
     background-color: #1A1A1A;
 }
 
-
 .img-carousel{
     width: 350px;
-    height: 270px;}
-    
+    height: 280px;
+}
+
+.about img{
+    height: 100%;
+}
+    .fa.fa-arrow-right, .fa.fa-arrow-left{
+        font-size: 20px;
+        border: 2px solid #262626;
+        border-radius: 50%;
+        padding: 20px;
+    }
+
+    .about a{
+        background-color: #1A1A1A;
+    }
 /* recipes 
 ********
 ********
@@ -636,7 +740,13 @@ hr{
         min-height: 300px;
     }
 }
-
+.small-recipes-blank h4{
+    color: #fff !important;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 19px;
+    text-align: left;
+}
 .srb-1{
     background-image: url('./img/recipes-2.png');
 }
@@ -754,6 +864,9 @@ margin: 10px 0;
     padding: 0;
     letter-spacing: 0.2em;
     color: #737373;
+}
+.social-blank button:hover{
+    color: greenyellow;
 }
 
 .social-blnk-upper{

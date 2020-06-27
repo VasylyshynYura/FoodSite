@@ -18,12 +18,33 @@
     }
      ;
 }
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() >
+                    300) {  
+                    $(".navbar").css("background-color",
+                        "rgba(48, 48, 48, 0.8)"
+                        );  
+                } else {
+                    $(".navbar").css("background-color",
+                        "transparent");  
+                    
+                }
+            });
+        });
 
+$(document).ready(function() {
+  $('.navbar-toggler-icon').click(function(event) {
+    $('.navbar-collapse').toggleClass('active-nav')
+  });
+});
 
-
-
-
-
+let formSignIn = document.querySelector('.form_signIn');
+function ShowForm() {
+  formSignIn.classList.toggle('show-form');
+  document.querySelector('body').classList.toggle('lock-body');
+  document.querySelector('section').classList.toggle('lock-section');
+}
     
 
 
