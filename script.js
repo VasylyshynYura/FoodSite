@@ -21,7 +21,7 @@
         $(document).ready(function () {
             $(window).scroll(function () {
                 if ($(document).scrollTop() >
-                    300) {  
+                    150) {  
                     $(".navbar").css("background-color",
                         "rgba(48, 48, 48, 0.8)"
                         );  
@@ -46,5 +46,17 @@ function ShowForm() {
   document.querySelector('section').classList.toggle('lock-section');
 }
     
+$(document).ready(function() {
+  $('.nav-link').click(function(event) {
+    $('.navbar-collapse').removeClass('show');
+  });
+});
 
+function cancelForm() {
+  let formSignIn = document.querySelector('.form_signIn');
+  formSignIn.classList.remove('show-form');
+  document.querySelector('body').classList.remove('lock-body');
+  document.querySelector('section').classList.remove('lock-section');
+
+}
 

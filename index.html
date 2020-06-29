@@ -55,7 +55,9 @@
           </li>
           <ul class="navbar-nav  second-ul">
             <li class="nav-link">
-              <a href=""><button class="btn">Login</button></a>
+              <a href="">
+                <button class="btn">Login</button>
+              </a>
             </li>
             <li class="nav-link">
               <a href="#">
@@ -70,27 +72,27 @@
   </nav>
   <div class="regist">
     <form class="form_signIn" name="signIn" method="GET">
-      <legend>Registration Form
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" required=""><br>
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Необязательно">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"required=""><br>
-          <div class="gender">
-            <input type="checkbox" id="male" name="gender" style="margin-left: 0;">
-            <label for="male">Male</label><br>
-            <input type="checkbox" id="female" name="gender" >
-            <label for="female">Female</label>
-          </div>
-        <input type="submit" name="Register" class="register">
-      </legend>
+        <legend>Registration Form</legend>
+          <span class="cancel-button-form" onclick="cancelForm()">CANCEL</span>
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" required=""><br>
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Необязательно">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password"required=""><br>
+            <div class="gender">
+              <input type="checkbox" id="male" name="gender" style="margin-left: 0;">
+              <label for="male">Male</label><br>
+              <input type="checkbox" id="female" name="gender" >
+              <label for="female">Female</label>
+            </div>
+          <input type="submit" name="Register" class="register">
     </form>
   </div>
 
-  <section class="title">
+  <section class="title section">
     <div class="title-content">
       <h1> <span style="margin-right: 30px;">Your</span>Favourite Food</h1>
       <h1> <span style="margin-right: 40px;">Delivered</span>Hot & Fresh</h1>
@@ -117,7 +119,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about section" id="about">
     <div class="small-title">
       <h2><b>AB0UT</b> </h2>
       <hr style="opacity: 0;">
