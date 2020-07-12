@@ -33,7 +33,7 @@
         </div>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="blockBurger()">
         <span class="navbar-toggler-icon"> 
           <i class="fa fa-bars" aria-hidden="true"></i>
         </span>
@@ -60,7 +60,7 @@
               </a>
             </li>
             <li class="nav-link">
-              <a href="#">
+              <a  href="#">
                 <button onclick="ShowForm()" class="signIn btn" >Sign In</button>
               </a>
             </li>
@@ -71,17 +71,16 @@
     </div>
   </nav>
   <div class="regist">
-    <form class="form_signIn" name="signIn" method="GET">
+    <form class="form_signIn" name="signIn" method="GET" id="form">
         <legend>Registration Form</legend>
           <span class="cancel-button-form" onclick="cancelForm()">CANCEL</span>
-          <label for="fname">First Name:</label>
+          <label for="fname">Login</label>
           <input type="text" id="fname" name="fname" required=""><br>
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname">
-          <label for="email">Email:</label>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password"required="" class="password">
+          <span class="show-password-button" onclick="showPassword(this)"><i class="fa fa-eye" aria-hidden="true"></i></span><br>
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Необязательно">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password"required=""><br>
             <div class="gender">
               <input type="checkbox" id="male" name="gender" style="margin-left: 0;">
               <label for="male">Male</label><br>

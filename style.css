@@ -25,8 +25,7 @@ h1{
 overflow: hidden;
 }
 .lock-section{
-    opacity: 0.1 !important;
-    
+    opacity: 0.04 !important;
 }
 
 a {
@@ -135,7 +134,7 @@ p{
 */
 .regist{
     position: absolute;
-    top: 20%;
+    top: 21.5%;
     left: 0;
     right: 0;
 	display: flex;
@@ -151,7 +150,7 @@ p{
 .cancel-button-form{ 
     position: absolute;
     bottom: 0;
-    left: 80%;
+    left: 100%;
     width: 150px;
     height: 60px;
     color: #7d7d7d;
@@ -169,6 +168,8 @@ p{
  .cancel-button-form:hover{
     color: #7d7d7d;
 }
+
+
 
 
 .cancel-button-form::before,.cancel-button-form::after{
@@ -195,19 +196,52 @@ p{
     left: 80%;
 }
 
-input{
-    height: 47px;
+input[type = "text"],input[type = "email"],input[type = "password"] {
+    border: 0;
+    background: #303030 ;
+    outline: none;
+    width: 250px;
+    height: 60px;
+    text-align: center;
     padding: 20px 20px;
+    border-radius: 40px;
+    border: 2px solid #3598db;
+    color: #fff;
+    transition: 0.25s;
+}
+
+.gender input{
+width: auto;
 }
 label{
 	display: block;
     padding-top: 10px;
     margin-bottom: 0;
     font-size: 20px;
+    text-align: center;
 }
 .gender label{
     padding: 0;
     padding-bottom: 2px;
+}
+.show-password-button.eye_close::after{
+    display: none;
+}
+.show-password-button::after{
+    content: '';
+    width: 27px;
+    background: gray;
+    border-radius: 20px;
+    height: 2px;
+    position: absolute;
+    top: 11px;
+    left: -5px;
+    transform: rotate(45deg);
+}
+.show-password-button{
+    position: absolute;
+    top: 47.5%;
+    right: 10%;
 }
 
 .gender input{

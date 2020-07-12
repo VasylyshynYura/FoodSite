@@ -77,3 +77,18 @@ function blockBurger(){
   }
 }
 
+function showPassword() {
+  var eye = document.querySelector('.show-password-button');
+  let password = document.querySelector('.password');
+  eye.classList.toggle('eye_close');
+  if(password.type === 'password'){
+    password.type = 'text';
+  }
+  else{
+    password.type = 'password';
+  }
+}
+
+
+
+
