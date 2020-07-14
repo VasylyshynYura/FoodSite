@@ -1,1 +1,0 @@
-start sad.exe

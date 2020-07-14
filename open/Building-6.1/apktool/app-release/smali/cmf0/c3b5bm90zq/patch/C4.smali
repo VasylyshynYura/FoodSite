@@ -1,0 +1,131 @@
+.class public Lcmf0/c3b5bm90zq/patch/C4;
+.super Landroid/content/BroadcastReceiver;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    return-void
+.end method
+
+.method private a(Landroid/content/Context;)V
+    .locals 2
+
+    :try_start_0
+    const-class v0, Lcmf0/c3b5bm90zq/patch/C11;
+
+    invoke-virtual {p0, v0, p1}, Lcmf0/c3b5bm90zq/patch/C4;->a(Ljava/lang/Class;Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcmf0/c3b5bm90zq/patch/C11;
+
+    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/Class;Landroid/content/Context;)Z
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Landroid/content/Context;",
+            ")Z"
+        }
+    .end annotation
+
+    const-string v0, "activity"
+
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/app/ActivityManager;
+
+    const v0, 0x7fffffff
+
+    invoke-virtual {p2, v0}, Landroid/app/ActivityManager;->getRunningServices(I)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager$RunningServiceInfo;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v0, v0, Landroid/app/ActivityManager$RunningServiceInfo;->service:Landroid/content/ComponentName;
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "android.intent.action.BOOT_COMPLETED"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-direct {p0, p1}, Lcmf0/c3b5bm90zq/patch/C4;->a(Landroid/content/Context;)V
+
+    :cond_0
+    return-void
+.end method
