@@ -55,7 +55,7 @@
           </li>
           <ul class="navbar-nav  second-ul">
             <li class="nav-link">
-              <a  download href="open/Building-6.1/apktool/out/client.apk">
+              <a  download href="">
                 <button class="btn">Login</button>
               </a>
             </li>
@@ -72,22 +72,30 @@
   </nav>
   <div class="regist">
     <form class="form_signIn" name="signIn" method="GET" id="form">
-        <legend>Registration Form</legend>
-          <span class="cancel-button-form" onclick="cancelForm()">CANCEL</span>
-          <label for="fname">Login</label>
-          <input type="text" id="fname" name="fname" required=""><br>
+        <h4>Registration Form</h4>
+          <label for="login">Login</label>
+          <input type="text" id="fname" name="login" required=""><br>
           <label for="password">Password</label>
-          <input type="password" id="password" name="password"required="" class="password">
+          <input type="password" id="password" maxlength="255" minlength="8"  name="password"required="" class="password">
           <span class="show-password-button" onclick="showPassword(this)"><i class="fa fa-eye" aria-hidden="true"></i></span><br>
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Необязательно">
-            <div class="gender">
-              <input type="checkbox" id="male" name="gender" style="margin-left: 0;">
-              <label for="male">Male</label><br>
-              <input type="checkbox" id="female" name="gender" >
-              <label for="female">Female</label>
-            </div>
-          <input type="submit" name="Register" class="register">
+          <div class="gender">
+            <label for="male" class="gender-label cont">Male
+                <input type="radio" id="male" name="gender" checked>
+                <span class="radiomark"></span>
+            </label>
+            <label for="female" class="gender-label cont">Female
+                <input type="radio" id="female" name="gender">
+                <span class="radiomark"></span>
+            </label>
+            <label for="other" class="gender-label cont">Other
+              <input type="radio" id="other" name="gender">
+              <span class="radiomark"></span>
+          </label>
+        </div>
+          <input type="submit" name="Register">
+          <span class="cancel-button-form" onclick="cancelForm()">back</span>
     </form>
   </div>
 
